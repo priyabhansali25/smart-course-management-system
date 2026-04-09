@@ -1,0 +1,86 @@
+{% extends 'masterpage.html' %}
+{% load static %}
+
+{% block slider %}
+{% endblock %}
+
+<div id="tooplate_menu">
+    {% block menu %}
+   <ul>
+        <li><a href="/adminhome/" class="current">Home</a></li>
+        <li><a href="/adminhome/courseentry/">Add Courses</a></li>
+        <li><a href="/adminhome/courselist/"> Course List</a></li>
+        <li><a href="#">Add Batches</a></li>
+        <li><a href="/adminhome/studentlist">Student List</a></li>
+        <li><a href="/adminhome/adminlogout/">Logout</a></li>
+    </ul>
+    {% endblock %}
+    <div class="cleaner"></div>
+</div>
+
+        {% block content %}
+        <div id="tooplate_main_top"></div>
+        <div id="tooplate_main">
+            <div class="col_w900">
+                
+                <div class="cleaner"></div>
+            </div>
+
+            <div class="col_w900 col_w900_last">
+                <div class="col_w580 float_l">
+<font color="red">{{ msg }}</font>                    
+<div class="con_tit_01">Course Entry Form</div>
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+<table border="1" align="center">
+<tr>
+<td>Course Name</td>
+<td>
+    <input type="text" name="coursename" required>
+</td>
+</tr>
+
+<tr>
+<td>Duration</td>
+ <td>
+   <input type="text" name="duration" required>                                
+ </td>
+ </tr>
+<tr>
+    <td>Fees</td>
+    <td>
+        <input type="text" name="fees" required>
+    </td>
+</tr> 
+<tr>
+    <td>Course Details</td>
+    <td>
+        <textarea name="coursedetails"></textarea>
+    </td>
+</tr>  
+<tr>
+    <td>Course Icon</td>
+    <td>
+        <input type="file" name="courseicon">
+    </td>
+</tr>   
+<tr>
+    <td colspan="2" align="center">
+        <input type="submit" value="save">
+    </td>
+</tr>                  
+</table>
+</form> 
+</div>
+
+                <div class="col_w280 float_r">
+
+                   
+                    <div class="cleaner"></div>
+                </div>
+            </div>
+            <div class="cleaner"></div>
+        </div> <!-- end of main -->
+        {% endblock %}
+
+        

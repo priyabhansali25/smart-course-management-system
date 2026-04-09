@@ -1,0 +1,31 @@
+Differenece between project and app
+
+Django application consisits of project and app, it also generates an automatic base directiory for the app, so we can focus on writing code(business logics) rather than creating app directories.
+
+the difference between a project and app is, a project is a collection of configuration files and apps whereas the app is a web application which is written to perform business logic.
+
+for create a new project open and write command
+
+
+
+Django-admin startproject projectname
+
+exp.
+c:/>django-admin statrtproject batch5
+
+for create a new app open cmd and write command
+-> access your project folder
+1. c:/>cd
+
+
+
+for create new app
+python manage.py startapp adminapp
+------------------------------------------
+
+2. create a urls.py file and write following code
+from Django.contrib import admin
+from django.urls import path
+from . import views
+
+urlpatterns = [

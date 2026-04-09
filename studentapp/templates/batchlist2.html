@@ -1,0 +1,66 @@
+{% extends 'masterpage.html' %}
+{% load static %}
+
+{% block slider %}
+{% endblock %}
+
+<div id="tooplate_menu">
+    {% block menu %}
+    <ul>
+        <li><a href="/studenthome/" class="current">Home</a></li>
+        <li><a href="/studenthome/courselist2">Course List</a></li>
+        <li><a href="/studenthome/batchlist2">Batchs List</a></li>>
+        <li><a href="#">Update Profile</a></li>
+        <li><a href="#">Logout</a></li>
+    </ul>
+    {% endblock %}
+    <div class="cleaner"></div>
+</div>
+
+        {% block content %}
+        <div id="tooplate_main_top"></div>
+        <div id="tooplate_main">
+            <div class="col_w900">
+            <div class="cleaner"></div>
+            </div>
+
+            <div class="col_w900 col_w900_last">
+                <div class="col_w580 float_l">
+                    <div class="con_tit_01">
+                        Batch List
+                        <table border="1" align="center">
+                            <tr>
+                                <th>batch id</th>
+                                <th>batch title</th>
+                                <th>start date</th>
+                                <th>batch time</th>
+                                <th>faculty name</th>
+                                <th>option</th>
+                            </tr>
+                            {% for x in result %}                 
+                          <tr>
+                           <td>{{ x.batchid }}</td>
+                           <td>{{ x.batchtitle }}</td>
+                           <td>{{ x.startdate}}</td>
+                           <td>{{ x.batchtime}}</td>
+                           <td>{{ x.facultyname }}</td>
+                           <td><a href="/studenthome/admission/?batchid={{ i.batchid }}">select batch </a></td>
+                        </tr>
+                            {% endfor %}
+
+                        </table>
+                    </div>
+                 
+                </div>
+
+                <div class="col_w280 float_r">
+
+                   
+                    <div class="cleaner"></div>
+                </div>
+            </div>
+            <div class="cleaner"></div>
+        </div> <!-- end of main -->
+        {% endblock %}
+
+        

@@ -15,8 +15,12 @@ This system enables structured course handling, user management, and basic workf
 # Tech Stack
 - Backend: Python, Django  
 - Frontend: HTML, CSS, JavaScript  
-- Database: SQLite  
-- Other: Email API integration  
+- Database: MySQL
+- Other: Email API integration
+  
+# Screenshort
+<img width="483" height="594" alt="image" src="https://github.com/user-attachments/assets/f2106ebd-ee33-48fd-b5e2-f10ea8aa7c49" />
+
 
 # Project Structure
 educationproject/
